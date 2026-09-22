@@ -7,14 +7,14 @@ export default function SeoMeta({
   description,
   canonical,
   ogType = 'website',
-  ogImage = '/logo-nk.png'
+  ogImage = 'https://nkassociatesglobal.com/logo-nk.png'
 }) {
   const fullTitle = title 
     ? `${title} | ${siteContent.company.name}` 
     : `${siteContent.company.name} | Global Offshore Accounting & Back-Office Support`;
 
   const metaDesc = description || siteContent.hero.subheadline;
-  const siteUrl = 'https://nkassociates.com';
+  const siteUrl = 'https://nkassociatesglobal.com';
   const fullUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
   return (

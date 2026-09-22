@@ -2,12 +2,16 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0A1E36" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="format-detection" content="telephone=no" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://nkassociatesglobal.com/" />
 
     <!-- Primary SEO Meta Tags -->
     <title>NK Associates | Global Offshore Accounting & Practice Support</title>
@@ -27,7 +31,8 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nkassociates.in/" />
+    <meta property="og:url" content="https://nkassociatesglobal.com/" />
+    <meta property="og:site_name" content="NK Associates" />
     <meta
       property="og:title"
       content="NK Associates | Your Global Offshore Accounting Team"
@@ -36,11 +41,11 @@
       property="og:description"
       content="Add accurate, reliable accounting capacity to your firm without the cost and stress of local hiring. Things you hate, let's us calculate."
     />
-    <meta property="og:image" content="/logo-nk.png" />
+    <meta property="og:image" content="https://nkassociatesglobal.com/logo-nk.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://nkassociates.in/" />
+    <meta property="twitter:url" content="https://nkassociatesglobal.com/" />
     <meta
       property="twitter:title"
       content="NK Associates | Global Offshore Accounting & Practice Support"
@@ -49,7 +54,7 @@
       property="twitter:description"
       content="Things you hate, let's us calculate. Reliable accounting, bookkeeping, and month-end close support worldwide."
     />
-    <meta property="twitter:image" content="/logo-nk.png" />
+    <meta property="twitter:image" content="https://nkassociatesglobal.com/logo-nk.png" />
 
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,6 +63,32 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Structured Data (JSON-LD) for Google Site Name & Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://nkassociatesglobal.com/#website",
+          "url": "https://nkassociatesglobal.com/",
+          "name": "NK Associates",
+          "alternateName": ["NK Associates Global", "NKAssociatesGlobal"],
+          "publisher": {
+            "@id": "https://nkassociatesglobal.com/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://nkassociatesglobal.com/#organization",
+          "name": "NK Associates",
+          "url": "https://nkassociatesglobal.com/",
+          "logo": "https://nkassociatesglobal.com/favicon.png"
+        }
+      ]
+    }
+    </script>
   </head>
   <body
     class="bg-white text-navy-900 font-sans antialiased selection:bg-sky-100 selection:text-brand-blue overflow-x-hidden w-full relative"
