@@ -82,30 +82,30 @@ export default function ScopeCalculator() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 text-white rounded-[2.5rem] p-8 sm:p-12 border border-navy-800 shadow-elevated">
+    <div className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 text-white rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-8 lg:p-12 border border-navy-800 shadow-elevated">
       
       {/* Header */}
       <div className="max-w-2xl">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-500/10 text-sky-400 border border-sky-400/20 mb-4">
-          <Calculator className="w-4 h-4" />
+        <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-sky-500/10 text-sky-400 border border-sky-400/20 mb-3 sm:mb-4">
+          <Calculator className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           <span>Interactive Practice Scope Estimator</span>
         </div>
-        <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+        <h3 className="text-xl sm:text-3xl font-extrabold tracking-tight text-white leading-snug">
           Configure Your Firm’s Delivery Scope
         </h3>
-        <p className="text-sm text-slate-300 mt-2 leading-relaxed">
+        <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
           Select your platform and expected transaction workload to preview estimated turnaround times and pod structure.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 pt-8 border-t border-navy-800 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-navy-800 items-start">
         
         {/* Controls Column (7 cols on lg) */}
-        <div className="lg:col-span-7 space-y-6">
+        <div className="lg:col-span-7 space-y-5 sm:space-y-6">
           
           {/* Step 1: Software */}
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-sky-300 mb-2">
+            <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-sky-300 mb-2">
               1. Primary Accounting Software
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -114,7 +114,7 @@ export default function ScopeCalculator() {
                   key={p}
                   type="button"
                   onClick={() => setPlatform(p)}
-                  className={`py-2.5 px-3 rounded-xl border text-xs font-bold transition-all text-center ${
+                  className={`py-2.5 px-2.5 sm:px-3 rounded-xl border text-xs font-bold transition-all text-center active:scale-95 cursor-pointer ${
                     platform === p
                       ? 'bg-sky-500 text-navy-950 border-sky-400 shadow-sm'
                       : 'bg-navy-850 text-slate-300 border-navy-700 hover:border-slate-500'
@@ -128,7 +128,7 @@ export default function ScopeCalculator() {
 
           {/* Step 2: Volume */}
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-sky-300 mb-2">
+            <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-sky-300 mb-2">
               2. Estimated Monthly Transaction Volume
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -137,7 +137,7 @@ export default function ScopeCalculator() {
                   key={v}
                   type="button"
                   onClick={() => setVolume(v)}
-                  className={`p-3 rounded-xl border text-left text-xs font-bold transition-all ${
+                  className={`p-2.5 sm:p-3 rounded-xl border text-left text-xs font-bold transition-all active:scale-98 cursor-pointer ${
                     volume === v
                       ? 'bg-navy-800 text-white border-sky-400 ring-2 ring-sky-400/20'
                       : 'bg-navy-850 text-slate-300 border-navy-700 hover:border-slate-500'
@@ -151,7 +151,7 @@ export default function ScopeCalculator() {
 
           {/* Step 3: Services Included */}
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-sky-300 mb-2">
+            <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-sky-300 mb-2">
               3. Services Required in Scope
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -162,7 +162,7 @@ export default function ScopeCalculator() {
                     key={svc}
                     type="button"
                     onClick={() => toggleService(svc)}
-                    className={`p-3 rounded-xl border text-left text-xs transition-all flex items-center gap-2.5 ${
+                    className={`p-2.5 sm:p-3 rounded-xl border text-left text-xs transition-all flex items-center gap-2.5 active:scale-98 cursor-pointer ${
                       isSelected
                         ? 'bg-navy-800 text-white border-sky-400/60 font-semibold'
                         : 'bg-navy-850/60 text-slate-400 border-navy-700 hover:text-slate-200'
@@ -183,7 +183,7 @@ export default function ScopeCalculator() {
         </div>
 
         {/* Results / Estimate Card (5 cols on lg) */}
-        <div className="lg:col-span-5 bg-navy-850/90 rounded-3xl p-6 sm:p-8 border border-navy-700 shadow-elevated space-y-5">
+        <div className="lg:col-span-5 bg-navy-850/90 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-navy-700 shadow-elevated space-y-4 sm:space-y-5">
           <div className="flex items-center justify-between border-b border-navy-750 pb-4">
             <span className="text-xs uppercase tracking-wider font-bold text-slate-400">
               Estimated Delivery Profile

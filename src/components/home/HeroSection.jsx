@@ -47,7 +47,7 @@ export default function HeroSection() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-[1.08]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-[1.12] sm:leading-[1.08]">
               {siteContent.hero.headlineStart}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-sky-600 to-sky-500 block sm:inline">
                 {siteContent.hero.headlineHighlight}
@@ -55,25 +55,25 @@ export default function HeroSection() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl font-normal">
+            <p className="text-base sm:text-xl text-slate-600 leading-relaxed max-w-2xl font-normal">
               {siteContent.hero.subheadline}
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
               <button
                 type="button"
                 onClick={() => openConsultation('form', '2–4 Week Pilot Program')}
-                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-brand-blue to-sky-600 hover:from-brand-hover hover:to-sky-700 text-white px-8 py-4 rounded-full font-bold text-base shadow-lg shadow-sky-500/25 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-center cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-brand-blue to-sky-600 hover:from-brand-hover hover:to-sky-700 text-white px-7 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-base shadow-lg shadow-sky-500/25 transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] text-center cursor-pointer"
               >
                 <span>Start a 2–4 Week Pilot</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
 
               <button
                 type="button"
                 onClick={() => openConsultation('schedule')}
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-navy-900 border border-slate-300 hover:border-brand-blue px-7 py-4 rounded-full font-bold text-base transition-colors text-center shadow-xs cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-navy-900 border border-slate-300 hover:border-brand-blue px-6 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-colors text-center shadow-xs active:scale-[0.98] cursor-pointer"
               >
                 <Calendar className="w-4 h-4 text-brand-blue" />
                 <span>Book a 15-Min Call</span>
@@ -84,27 +84,27 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center gap-1.5 text-slate-600 hover:text-brand-blue font-bold text-sm py-2 px-3 text-center underline underline-offset-4 decoration-slate-300 hover:decoration-brand-blue transition-colors"
               >
                 <span>Explore 12 Services</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
             {/* Trust Chips */}
-            <div className="pt-4 border-t border-slate-200/70 grid grid-cols-2 sm:flex sm:flex-wrap gap-x-6 gap-y-2.5 text-xs font-semibold text-slate-600">
+            <div className="pt-4 border-t border-slate-200/70 grid grid-cols-2 gap-x-3 gap-y-2 text-[11px] sm:text-xs font-semibold text-slate-600">
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-blue shrink-0" />
-                <span>US GAAP & IFRS Ready</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0" />
+                <span className="truncate sm:overflow-visible">US GAAP & IFRS</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-brand-blue shrink-0" />
-                <span>100% White-Label Delivery</span>
+                <ShieldCheck className="w-3.5 h-3.5 text-brand-blue shrink-0" />
+                <span className="truncate sm:overflow-visible">100% White-Label</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Lock className="w-4 h-4 text-brand-blue shrink-0" />
-                <span>Strict NDA & MFA Security</span>
+                <Lock className="w-3.5 h-3.5 text-brand-blue shrink-0" />
+                <span className="truncate sm:overflow-visible">NDA & MFA Security</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-brand-blue shrink-0" />
-                <span>Global Time-Zone Overlap</span>
+                <Clock className="w-3.5 h-3.5 text-brand-blue shrink-0" />
+                <span className="truncate sm:overflow-visible">Global Time Overlap</span>
               </div>
             </div>
 

@@ -165,77 +165,80 @@ export default function ConsultationModal() {
   )}`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-navy-950/70 backdrop-blur-sm transition-opacity"
         onClick={closeConsultation}
       ></div>
 
-      {/* Modal Card */}
-      <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden z-10 my-8 animate-slide-up">
+      {/* Modal Card - Bottom Sheet on mobile, centered card on desktop */}
+      <div className="relative w-full max-w-2xl bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl border-t sm:border border-slate-200 overflow-hidden z-10 max-h-[92vh] sm:max-h-[90vh] flex flex-col my-0 sm:my-8 animate-slide-up">
         
         {/* Top Header */}
-        <div className="px-6 py-5 bg-gradient-to-r from-navy-950 to-navy-900 text-white flex items-center justify-between border-b border-navy-800">
-          <div className="flex items-center gap-3">
-            <div className="bg-white p-1 rounded-xl">
-              <img src={siteContent.company.logo} alt="NK Associates" className="h-8 w-auto" />
+        <div className="px-4 sm:px-6 py-3.5 sm:py-5 bg-gradient-to-r from-navy-950 to-navy-900 text-white flex items-center justify-between border-b border-navy-800 shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+            <div className="bg-white p-1 rounded-xl shrink-0">
+              <img src={siteContent.company.logo} alt="NK Associates" className="h-7 sm:h-8 w-auto" />
             </div>
-            <div>
-              <h3 className="text-base font-bold leading-tight">Practice Consultation & Pilot</h3>
-              <p className="text-xs text-sky-300">Fast 12-Hour Confirmation • Bilateral NDA Protected</p>
+            <div className="min-w-0">
+              <h3 className="text-sm sm:text-base font-bold leading-tight truncate">Practice Consultation & Pilot</h3>
+              <p className="text-[10px] sm:text-xs text-sky-300 truncate">Fast 12-Hour Confirmation • Bilateral NDA Protected</p>
             </div>
           </div>
           <button
             onClick={closeConsultation}
-            className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center transition-colors"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center transition-colors shrink-0 cursor-pointer"
             aria-label="Close modal"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
 
         {/* Tab Switcher */}
-        <div className="flex border-b border-slate-200 bg-slate-50/80 px-4 pt-2">
+        <div className="flex border-b border-slate-200 bg-slate-50/80 px-2 sm:px-4 pt-2 shrink-0">
           <button
             onClick={() => setConsultationTab('schedule')}
-            className={`flex items-center gap-2 py-3 px-4 font-bold text-xs sm:text-sm border-b-2 transition-all ${
+            className={`flex-1 flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-1 sm:px-4 font-bold text-[11px] sm:text-sm border-b-2 transition-all cursor-pointer ${
               consultationTab === 'schedule'
                 ? 'border-brand-blue text-brand-blue bg-white rounded-t-xl shadow-xs'
                 : 'border-transparent text-slate-500 hover:text-navy-900'
             }`}
           >
-            <Calendar className="w-4 h-4" />
-            <span>Schedule 15-Min Call</span>
+            <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="hidden sm:inline">Schedule 15-Min Call</span>
+            <span className="inline sm:hidden">15-Min Call</span>
           </button>
 
           <button
             onClick={() => setConsultationTab('form')}
-            className={`flex items-center gap-2 py-3 px-4 font-bold text-xs sm:text-sm border-b-2 transition-all ${
+            className={`flex-1 flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-1 sm:px-4 font-bold text-[11px] sm:text-sm border-b-2 transition-all cursor-pointer ${
               consultationTab === 'form'
                 ? 'border-brand-blue text-brand-blue bg-white rounded-t-xl shadow-xs'
                 : 'border-transparent text-slate-500 hover:text-navy-900'
             }`}
           >
-            <Send className="w-4 h-4" />
-            <span>Request Pilot / Scope</span>
+            <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="hidden sm:inline">Request Pilot / Scope</span>
+            <span className="inline sm:hidden">Pilot Scope</span>
           </button>
 
           <button
             onClick={() => setConsultationTab('direct')}
-            className={`flex items-center gap-2 py-3 px-4 font-bold text-xs sm:text-sm border-b-2 transition-all ${
+            className={`flex-1 flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-1 sm:px-4 font-bold text-[11px] sm:text-sm border-b-2 transition-all cursor-pointer ${
               consultationTab === 'direct'
                 ? 'border-brand-blue text-brand-blue bg-white rounded-t-xl shadow-xs'
                 : 'border-transparent text-slate-500 hover:text-navy-900'
             }`}
           >
-            <MessageCircle className="w-4 h-4" />
-            <span>Instant Chat & Info</span>
+            <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="hidden sm:inline">Instant Chat & Info</span>
+            <span className="inline sm:hidden">Direct Chat</span>
           </button>
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-8 max-h-[72vh] overflow-y-auto">
+        <div className="p-4 sm:p-8 overflow-y-auto flex-1">
           
           {/* TAB 1: SCHEDULE 15-MIN CALL */}
           {consultationTab === 'schedule' && (
@@ -271,16 +274,16 @@ export default function ConsultationModal() {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleScheduleSubmit} className="space-y-5">
-                  <div className="bg-sky-50/70 border border-sky-100 p-3.5 rounded-2xl flex items-center justify-between text-xs">
+                <form onSubmit={handleScheduleSubmit} className="space-y-4 sm:space-y-5">
+                  <div className="bg-sky-50/70 border border-sky-100 p-3 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
                     <div className="flex items-center gap-2 text-brand-blue font-semibold">
-                      <Globe2 className="w-4 h-4" />
+                      <Globe2 className="w-4 h-4 shrink-0" />
                       <span>Select Your Time Zone:</span>
                     </div>
                     <select
                       value={selectedTz}
                       onChange={(e) => setSelectedTz(e.target.value)}
-                      className="bg-white border border-slate-200 rounded-lg px-3 py-1.5 font-bold text-navy-900 text-xs focus:outline-none focus:ring-1 focus:ring-sky-400"
+                      className="w-full sm:w-auto bg-white border border-slate-200 rounded-lg px-3 py-2 font-bold text-navy-900 text-xs focus:outline-none focus:ring-1 focus:ring-sky-400"
                     >
                       {timezones.map((tz) => (
                         <option key={tz} value={tz}>{tz}</option>

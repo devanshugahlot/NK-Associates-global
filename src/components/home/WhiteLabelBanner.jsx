@@ -8,27 +8,27 @@ export default function WhiteLabelBanner() {
   const { openConsultation } = useModal();
 
   return (
-    <section className="py-20 lg:py-28 bg-white border-b border-slate-100">
+    <section className="py-14 sm:py-20 lg:py-28 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-gradient-to-br from-sky-50 via-white to-sky-50/40 rounded-[2.5rem] p-8 sm:p-12 lg:p-16 border border-sky-200 shadow-soft">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="bg-gradient-to-br from-sky-50 via-white to-sky-50/40 rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-12 lg:p-16 border border-sky-200 shadow-soft">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             {/* Left Copy */}
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs">
-                <ShieldCheck className="w-4 h-4 text-brand-blue" />
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs">
+                <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-blue" />
                 <span>{whiteLabel.badge}</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-tight">
                 Your Client. Your Brand.{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-sky-500">
                   Our Accounting Engine.
                 </span>
               </h2>
 
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-slate-600 leading-relaxed">
                 {whiteLabel.subheadline}
               </p>
 

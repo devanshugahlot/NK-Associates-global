@@ -28,29 +28,29 @@ export default function SecurityPage() {
       />
 
       {/* Hero Header */}
-      <section className="bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 text-white py-16 sm:py-24 border-b border-navy-800">
+      <section className="bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 text-white py-12 sm:py-24 border-b border-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-500/10 text-sky-400 border border-sky-400/20 mb-4">
-            <ShieldCheck className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-sky-500/10 text-sky-400 border border-sky-400/20 mb-3 sm:mb-4">
+            <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             <span>Fiduciary-Grade Data Governance</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-snug sm:leading-tight">
             Security & Confidentiality for{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-brand-blue">
               Sensitive Accounting Workflows
             </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-base sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             We treat your client financial data with the highest degree of confidentiality. Our operating protocols are designed specifically to eliminate vulnerability across legal, logical, and physical layers.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
             <button
               type="button"
               onClick={openSecurityModal}
-              className="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-navy-950 px-6 py-3.5 rounded-full font-bold text-xs shadow-md transition-all cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-400 text-navy-950 px-6 py-3.5 rounded-full font-bold text-xs shadow-md transition-all cursor-pointer active:scale-95"
             >
               <FileText className="w-4 h-4" />
               <span>Preview Mutual NDA & IT Specifications</span>
@@ -59,7 +59,7 @@ export default function SecurityPage() {
             <button
               type="button"
               onClick={() => openConsultation('schedule', 'IT & Security Protocol Discussion')}
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 py-3.5 rounded-full font-bold text-xs transition-colors cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 py-3.5 rounded-full font-bold text-xs transition-colors cursor-pointer active:scale-95"
             >
               <Calendar className="w-4 h-4 text-sky-300" />
               <span>Schedule Security Briefing Call</span>

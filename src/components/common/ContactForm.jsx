@@ -121,12 +121,12 @@ export default function ContactForm({ defaultService = '', defaultIntent = '' })
   };
 
   return (
-    <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-elevated border border-slate-100">
-      <div className="mb-6">
+    <div className="bg-white rounded-3xl p-5 sm:p-8 lg:p-10 shadow-elevated border border-slate-100">
+      <div className="mb-5 sm:mb-6">
         <h3 className="text-xl sm:text-2xl font-bold text-navy-900">
           Request a Consultation or Pilot
         </h3>
-        <p className="text-sm text-slate-500 mt-1">
+        <p className="text-xs sm:text-sm text-slate-500 mt-1">
           Tell us about your practice and software stack. We respond within 12 business hours.
         </p>
       </div>

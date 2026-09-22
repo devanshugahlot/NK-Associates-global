@@ -25,14 +25,14 @@ export default function RegionsServed() {
           description="We align our shift schedules to ensure meaningful daily overlap with your local working hours, whether your practice operates in North America, Europe, the Middle East, or the Asia-Pacific."
         />
 
-        {/* Region Selector Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {/* Region Selector Tabs - Horizontal scrollable on mobile */}
+        <div className="flex items-center overflow-x-auto no-scrollbar py-1 gap-2 mb-8 sm:mb-12 sm:flex-wrap sm:justify-center -mx-4 px-4 sm:mx-0 sm:px-0 touch-pan-x">
           {siteContent.regions.map((region) => (
             <button
               key={region.id}
               type="button"
               onClick={() => setActiveRegion(region.id)}
-              className={`px-5 py-3 rounded-2xl text-sm font-bold flex items-center gap-2.5 transition-all duration-200 cursor-pointer ${
+              className={`shrink-0 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all duration-200 cursor-pointer active:scale-95 ${
                 activeRegion === region.id
                   ? 'bg-navy-900 text-white shadow-md shadow-navy-900/20 ring-2 ring-sky-400'
                   : 'bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80'
@@ -45,7 +45,7 @@ export default function RegionsServed() {
         </div>
 
         {/* Active Region Spotlight Card */}
-        <div className="bg-gradient-to-br from-sky-50/70 via-white to-white rounded-3xl p-8 sm:p-12 border border-sky-200 shadow-soft grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-gradient-to-br from-sky-50/70 via-white to-white rounded-3xl p-5 sm:p-8 lg:p-12 border border-sky-200 shadow-soft grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
           
           <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-3">

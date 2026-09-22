@@ -27,32 +27,32 @@ export default function FaqPage() {
       />
 
       {/* Hero Header */}
-      <section className="bg-gradient-to-b from-sky-50/70 to-white py-16 sm:py-24 border-b border-slate-100 bg-fine-grid">
+      <section className="bg-gradient-to-b from-sky-50/70 to-white py-12 sm:py-20 border-b border-slate-100 bg-fine-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs mb-4">
             <HelpCircle className="w-4 h-4" />
             <span>Transparency First</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight">
             Frequently Asked{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-sky-500">
               Questions
             </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-base sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Everything you need to know about our offshore delivery model, data protection, turnaround SLAs, and white-label operations.
           </p>
 
           {/* FAQ Search Bar */}
-          <div className="mt-8 max-w-md mx-auto relative">
+          <div className="mt-6 sm:mt-8 max-w-md mx-auto relative">
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by keyword (e.g. pilot, NDA, software, SLA)..."
-              className="w-full pl-11 pr-4 py-3.5 rounded-full border border-slate-300 bg-white shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-brand-blue transition-all"
+              className="w-full pl-11 pr-4 py-3 sm:py-3.5 rounded-full border border-slate-300 bg-white shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-brand-blue transition-all"
             />
             <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
           </div>
@@ -60,11 +60,11 @@ export default function FaqPage() {
       </section>
 
       {/* FAQs List */}
-      <section className="py-20 bg-white border-b border-slate-100">
+      <section className="py-12 sm:py-20 bg-white border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {filteredFaqs.length === 0 ? (
-            <div className="text-center py-12 bg-slate-50 rounded-3xl border border-slate-200 p-8">
+            <div className="text-center py-10 sm:py-12 bg-slate-50 rounded-2xl sm:rounded-3xl border border-slate-200 p-6 sm:p-8">
               <p className="text-base text-slate-600">
                 No matching questions found for "<strong>{searchQuery}</strong>".
               </p>
@@ -76,7 +76,7 @@ export default function FaqPage() {
               </button>
             </div>
           ) : (
-            <div className="space-y-4">
+            <div className="space-y-3.5 sm:space-y-4">
               {filteredFaqs.map((faq, idx) => {
                 const isOpen = openIndex === idx;
                 return (
@@ -91,24 +91,24 @@ export default function FaqPage() {
                     <button
                       type="button"
                       onClick={() => toggleIndex(idx)}
-                      className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 focus:outline-none"
+                      className="w-full text-left p-4 sm:p-7 flex items-start sm:items-center justify-between gap-3 sm:gap-4 focus:outline-none"
                       aria-expanded={isOpen}
                     >
-                      <span className="text-base sm:text-lg font-bold text-navy-900 flex items-center gap-3">
-                        <span className="text-brand-blue font-mono text-sm">
+                      <span className="text-sm sm:text-lg font-bold text-navy-900 flex items-start gap-2.5 sm:gap-3 leading-snug">
+                        <span className="text-brand-blue font-mono text-xs sm:text-sm shrink-0 mt-0.5 sm:mt-0">
                           {idx < 9 ? `0${idx + 1}` : idx + 1}
                         </span>
-                        {faq.q}
+                        <span>{faq.q}</span>
                       </span>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                         isOpen ? 'bg-brand-blue text-white rotate-180' : 'bg-slate-100 text-slate-500'
                       }`}>
-                        <ChevronDown className="w-4 h-4" />
+                        <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       </div>
                     </button>
 
                     {isOpen && (
-                      <div className="px-6 pb-6 sm:px-7 sm:pb-7 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-4 animate-fade-in">
+                      <div className="px-4 pb-4 sm:px-7 sm:pb-7 text-xs sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3 sm:pt-4 animate-fade-in">
                         {faq.a}
                       </div>
                     )}
@@ -118,24 +118,24 @@ export default function FaqPage() {
             </div>
           )}
 
-          <div className="mt-16 bg-sky-50 rounded-3xl p-8 text-center border border-sky-200">
-            <h3 className="text-xl font-bold text-navy-900 mb-2">
+          <div className="mt-12 sm:mt-16 bg-sky-50 rounded-2xl sm:rounded-3xl p-5 sm:p-8 text-center border border-sky-200">
+            <h3 className="text-lg sm:text-xl font-bold text-navy-900 mb-2">
               Have a question not listed here?
             </h3>
-            <p className="text-sm text-slate-600 max-w-lg mx-auto mb-6">
+            <p className="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto mb-6">
               Our practice specialists are available to answer your technical, workflow, or legal questions.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3">
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-hover text-white px-7 py-3 rounded-full text-xs font-bold transition-all shadow-sm"
+                className="inline-flex items-center justify-center gap-2 bg-brand-blue hover:bg-brand-hover active:scale-[0.98] text-white px-6 py-3 rounded-full text-xs font-bold transition-all shadow-sm"
               >
                 <span>Contact Our Practice Team</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
               <a
                 href="tel:+917568820015"
-                className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 text-navy-900 px-5 py-3 rounded-full text-xs font-bold transition-all shadow-2xs"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 active:scale-[0.98] border border-slate-200 text-navy-900 px-5 py-3 rounded-full text-xs font-bold transition-all shadow-2xs"
               >
                 <Phone className="w-3.5 h-3.5 text-brand-blue" />
                 <span>Call: +91 75688 20015</span>
@@ -144,7 +144,7 @@ export default function FaqPage() {
                 href={`https://wa.me/${siteContent.contact.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 px-5 py-3 rounded-full text-xs font-bold transition-all shadow-2xs"
+                className="inline-flex items-center justify-center gap-2 bg-emerald-50 hover:bg-emerald-100 active:scale-[0.98] border border-emerald-200 text-emerald-800 px-5 py-3 rounded-full text-xs font-bold transition-all shadow-2xs"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
                 <span>WhatsApp: +91 75688 20015</span>

@@ -61,28 +61,28 @@ export default function ServicesPage() {
       />
 
       {/* Hero Header */}
-      <section className="bg-gradient-to-b from-sky-50/70 to-white py-16 sm:py-24 border-b border-slate-100 bg-fine-grid">
+      <section className="bg-gradient-to-b from-sky-50/70 to-white py-12 sm:py-24 border-b border-slate-100 bg-fine-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs mb-4">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs mb-3 sm:mb-4">
             <span>Global Accounting & Advisory Support</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-snug sm:leading-tight">
             Offshore Accounting Services Built for{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-sky-500">
               International Practices & Firms
             </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Every service is delivered with documented standard operating procedures, multi-tier maker-checker quality control, and complete white-label confidentiality.
           </p>
 
           {/* Quick Contact Badges */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
             <a
               href="tel:+917568820015"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-navy-900 hover:text-brand-blue border border-slate-200 text-xs font-bold shadow-2xs transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-navy-900 hover:text-brand-blue border border-slate-200 text-xs font-bold shadow-2xs transition-colors active:scale-95"
             >
               <Phone className="w-3.5 h-3.5 text-brand-blue" />
               <span>Direct Scope Hotline: +91 75688 20015</span>
@@ -91,21 +91,21 @@ export default function ServicesPage() {
               href={`https://wa.me/${siteContent.contact.whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold shadow-2xs transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold shadow-2xs transition-colors active:scale-95"
             >
               <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
               <span>WhatsApp Scope Discussion</span>
             </a>
           </div>
 
-          {/* Quick Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 mt-8">
+          {/* Quick Filter Tabs - Swipeable on mobile */}
+          <div className="flex items-center overflow-x-auto no-scrollbar py-1 gap-2 mt-6 sm:mt-8 sm:flex-wrap sm:justify-center -mx-4 px-4 sm:mx-0 sm:px-0 touch-pan-x">
             {categories.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCat(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+                className={`shrink-0 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer active:scale-95 ${
                   selectedCat === cat
                     ? 'bg-brand-blue text-white shadow-md shadow-sky-500/25'
                     : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'

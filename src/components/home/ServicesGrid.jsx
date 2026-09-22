@@ -56,13 +56,13 @@ export default function ServicesGrid({ showAll = false }) {
           description="From daily ledger reconciliations to complex multi-entity month-end closes and audit workpapers. Built for seamless white-label delivery."
         />
 
-        {/* Filter Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {/* Filter Badges - Horizontal scrollable on mobile */}
+        <div className="flex items-center overflow-x-auto no-scrollbar py-1 gap-2 mb-8 sm:mb-12 sm:flex-wrap sm:justify-center -mx-4 px-4 sm:mx-0 sm:px-0 touch-pan-x">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 ${
+              className={`shrink-0 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 active:scale-95 cursor-pointer ${
                 selectedCategory === cat
                   ? 'bg-brand-blue text-white shadow-sm shadow-sky-500/25'
                   : 'bg-slate-100 hover:bg-slate-200 text-slate-600'
@@ -74,14 +74,14 @@ export default function ServicesGrid({ showAll = false }) {
         </div>
 
         {/* 12 Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {displayedServices.map((service) => {
             const IconComp = iconMap[service.icon] || FileSpreadsheet;
             return (
               <div
                 key={service.id}
                 id={service.id}
-                className="group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 hover:border-sky-300 shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col justify-between"
+                className="group bg-white rounded-3xl p-5 sm:p-7 border border-slate-200/80 hover:border-sky-300 shadow-soft hover:shadow-elevated transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">

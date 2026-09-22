@@ -53,33 +53,33 @@ export default function HeroDashboard() {
       <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-brand-blue to-sky-600 rounded-3xl blur-xl opacity-20 transition duration-1000"></div>
 
       {/* Main Glass/Navy Container */}
-      <div className="relative bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950 text-white rounded-3xl p-6 sm:p-8 shadow-elevated border border-navy-800/90">
+      <div className="relative bg-gradient-to-b from-navy-900 via-navy-950 to-navy-950 text-white rounded-3xl p-4 sm:p-8 shadow-elevated border border-navy-800/90">
         
         {/* Header Strip & Interactive Tab Bar */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-navy-800 gap-3">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-400">
-              <Activity className="w-4 h-4" />
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3.5 border-b border-navy-800 gap-2.5">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-400 shrink-0">
+              <Activity className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-sky-300">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-sky-300">
                   Offshore Delivery Desk
                 </span>
               </div>
-              <h3 className="text-sm font-bold text-white tracking-tight">
+              <h3 className="text-xs sm:text-sm font-bold text-white tracking-tight">
                 Live Firm Operations
               </h3>
             </div>
           </div>
 
           {/* Tab Switcher Buttons */}
-          <div className="flex items-center bg-navy-850 p-1 rounded-xl border border-navy-750 self-start sm:self-auto">
+          <div className="flex items-center bg-navy-850 p-0.5 sm:p-1 rounded-xl border border-navy-750 self-stretch sm:self-auto justify-between sm:justify-start">
             <button
               type="button"
               onClick={() => setActiveTab('kpis')}
-              className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
+              className={`flex-1 sm:flex-none text-center px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all cursor-pointer ${
                 activeTab === 'kpis'
                   ? 'bg-sky-500 text-navy-950 shadow-xs'
                   : 'text-slate-400 hover:text-white'
@@ -90,7 +90,7 @@ export default function HeroDashboard() {
             <button
               type="button"
               onClick={() => setActiveTab('chart')}
-              className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
+              className={`flex-1 sm:flex-none text-center px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all cursor-pointer ${
                 activeTab === 'chart'
                   ? 'bg-sky-500 text-navy-950 shadow-xs'
                   : 'text-slate-400 hover:text-white'
@@ -101,7 +101,7 @@ export default function HeroDashboard() {
             <button
               type="button"
               onClick={() => setActiveTab('clocks')}
-              className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
+              className={`flex-1 sm:flex-none text-center px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all cursor-pointer ${
                 activeTab === 'clocks'
                   ? 'bg-sky-500 text-navy-950 shadow-xs'
                   : 'text-slate-400 hover:text-white'
@@ -114,25 +114,25 @@ export default function HeroDashboard() {
 
         {/* TAB 1: KPIS & CLOSE */}
         {activeTab === 'kpis' && (
-          <div className="space-y-4 pt-4 animate-fade-in">
+          <div className="space-y-3.5 pt-3.5 animate-fade-in">
             {/* Operational Stats Grid */}
-            <div className="grid grid-cols-3 gap-2.5">
-              <div className="bg-navy-850/90 border border-navy-700/60 rounded-2xl p-3 text-center">
-                <div className="text-xl sm:text-2xl font-black text-sky-400">24h</div>
-                <div className="text-[10px] text-slate-300 font-medium mt-0.5">Turnaround SLA</div>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="bg-navy-850/90 border border-navy-700/60 rounded-2xl p-2 sm:p-3 text-center">
+                <div className="text-lg sm:text-2xl font-black text-sky-400">24h</div>
+                <div className="text-[9px] sm:text-[10px] text-slate-300 font-medium mt-0.5">Turnaround</div>
               </div>
-              <div className="bg-navy-850/90 border border-navy-700/60 rounded-2xl p-3 text-center">
-                <div className="text-xl sm:text-2xl font-black text-emerald-400">99.4%</div>
-                <div className="text-[10px] text-slate-300 font-medium mt-0.5">QC Accuracy</div>
+              <div className="bg-navy-850/90 border border-navy-700/60 rounded-2xl p-2 sm:p-3 text-center">
+                <div className="text-lg sm:text-2xl font-black text-emerald-400">99.4%</div>
+                <div className="text-[9px] sm:text-[10px] text-slate-300 font-medium mt-0.5">QC Accuracy</div>
               </div>
-              <div className="bg-navy-850/90 border border-navy-700/60 rounded-2xl p-3 text-center">
-                <div className="text-xl sm:text-2xl font-black text-amber-400">2–4 Wk</div>
-                <div className="text-[10px] text-slate-300 font-medium mt-0.5">Risk-Free Pilot</div>
+              <div className="bg-navy-850/90 border border-navy-700/60 rounded-2xl p-2 sm:p-3 text-center">
+                <div className="text-lg sm:text-2xl font-black text-amber-400">2–4 Wk</div>
+                <div className="text-[9px] sm:text-[10px] text-slate-300 font-medium mt-0.5">Free Pilot</div>
               </div>
             </div>
 
             {/* Live Close Progress Bar */}
-            <div className="bg-navy-850/70 border border-navy-750 rounded-2xl p-3.5">
+            <div className="bg-navy-850/70 border border-navy-750 rounded-2xl p-3 sm:p-3.5">
               <div className="flex justify-between items-center text-xs font-semibold mb-1.5">
                 <span className="text-slate-200">Month-End Close Ledger</span>
                 <span className="text-sky-400 font-mono font-bold">88% Verified</span>
@@ -141,37 +141,37 @@ export default function HeroDashboard() {
                 <div className="h-full bg-gradient-to-r from-brand-blue to-sky-400 rounded-full w-[88%] transition-all duration-700"></div>
               </div>
               <div className="flex justify-between items-center text-[10px] text-slate-400 mt-1.5">
-                <span>Bank Feeds & AP Complete</span>
+                <span>Bank Feeds & AP Cleared</span>
                 <span>Trial Balance Tie-out</span>
               </div>
             </div>
 
             {/* Interactive Checklist (Clickable!) */}
             <div className="space-y-1.5 pt-1">
-              <div className="flex justify-between items-center text-[11px] text-slate-400 font-semibold px-1">
-                <span>Quality Control Checklist (Interactive):</span>
-                <span className="text-sky-400 text-[10px]">Click to toggle</span>
+              <div className="flex justify-between items-center text-[10px] sm:text-[11px] text-slate-400 font-semibold px-1">
+                <span>Quality Control Checklist:</span>
+                <span className="text-sky-400 text-[10px]">Tap to toggle</span>
               </div>
               {checklist.map((item) => (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => toggleTask(item.id)}
-                  className={`w-full flex items-center justify-between p-2.5 rounded-xl border text-left text-xs transition-all ${
+                  className={`w-full flex items-center justify-between gap-2 p-2 sm:p-2.5 rounded-xl border text-left text-[11px] sm:text-xs transition-all active:scale-[0.99] cursor-pointer ${
                     item.done
                       ? 'bg-navy-850/70 border-navy-750 text-slate-200'
                       : 'bg-navy-950 border-navy-800 text-slate-400 opacity-80'
                   }`}
                 >
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className={`w-4 h-4 shrink-0 transition-colors ${
+                  <div className="flex items-center gap-2 min-w-0 flex-1">
+                    <CheckCircle2 className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 transition-colors ${
                       item.done ? 'text-emerald-400' : 'text-slate-600'
                     }`} />
-                    <span className={item.done ? '' : 'line-through text-slate-500'}>
+                    <span className={`truncate ${item.done ? '' : 'line-through text-slate-500'}`}>
                       {item.text}
                     </span>
                   </div>
-                  <span className="text-[10px] font-mono text-sky-300 bg-sky-950/80 px-2 py-0.5 rounded border border-sky-800/50">
+                  <span className="shrink-0 text-[9px] sm:text-[10px] font-mono text-sky-300 bg-sky-950/80 px-1.5 sm:px-2 py-0.5 rounded border border-sky-800/50">
                     {item.badge}
                   </span>
                 </button>
@@ -243,17 +243,17 @@ export default function HeroDashboard() {
             {worldTimes.map((item) => (
               <div
                 key={item.city}
-                className="flex items-center justify-between p-2.5 rounded-xl bg-navy-850/80 border border-navy-750 text-xs"
+                className="flex items-center justify-between gap-2 p-2 sm:p-2.5 rounded-xl bg-navy-850/80 border border-navy-750 text-[11px] sm:text-xs"
               >
-                <div className="flex items-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <span className={`w-2 h-2 rounded-full shrink-0 ${
                     item.active ? 'bg-emerald-400 animate-pulse' : 'bg-slate-500'
                   }`}></span>
-                  <span className="font-bold text-white">{item.city}</span>
+                  <span className="font-bold text-white truncate">{item.city}</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-[11px] text-slate-400 font-mono">{item.time}</span>
-                  <span className={`text-[10px] font-semibold px-2 py-0.5 rounded ${
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="text-[10px] sm:text-[11px] text-slate-300 font-mono font-semibold">{item.time}</span>
+                  <span className={`text-[9px] sm:text-[10px] font-semibold px-1.5 sm:px-2 py-0.5 rounded truncate max-w-[90px] sm:max-w-none ${
                     item.active ? 'bg-emerald-950 text-emerald-300 border border-emerald-800/60' : 'bg-navy-900 text-slate-400'
                   }`}>
                     {item.status}

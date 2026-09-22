@@ -11,9 +11,9 @@ export default function SectionHeading({
   const isCenter = align === 'center';
 
   return (
-    <div className={`max-w-3xl ${isCenter ? 'mx-auto text-center' : 'text-left'} mb-12 lg:mb-16`}>
+    <div className={`max-w-3xl ${isCenter ? 'mx-auto text-center' : 'text-left'} mb-8 sm:mb-12 lg:mb-16`}>
       {badge && (
-        <div className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 ${
+        <div className={`inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4 ${
           dark 
             ? 'bg-sky-500/10 text-sky-400 border border-sky-400/20' 
             : 'bg-sky-50 text-brand-blue border border-sky-200'
@@ -23,7 +23,7 @@ export default function SectionHeading({
         </div>
       )}
 
-      <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] ${
+      <h2 className={`text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.2] sm:leading-[1.15] ${
         dark ? 'text-white' : 'text-navy-900'
       }`}>
         {title}{' '}
@@ -35,7 +35,7 @@ export default function SectionHeading({
       </h2>
 
       {description && (
-        <p className={`mt-5 text-base sm:text-lg leading-relaxed ${
+        <p className={`mt-3 sm:mt-5 text-sm sm:text-lg leading-relaxed ${
           dark ? 'text-slate-300' : 'text-slate-600'
         }`}>
           {description}

@@ -21,11 +21,11 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {siteContent.testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="bg-slate-50/70 border border-slate-200 rounded-3xl p-7 flex flex-col justify-between hover:border-sky-300 hover:bg-white hover:shadow-soft transition-all duration-300 relative"
+              className="bg-slate-50/70 border border-slate-200 rounded-3xl p-5 sm:p-7 flex flex-col justify-between hover:border-sky-300 hover:bg-white hover:shadow-soft transition-all duration-300 relative"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">

@@ -35,7 +35,7 @@ export default function ProcessTimeline() {
         />
 
         {/* 4-Step Cards Layout (All Clickable!) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {siteContent.processSteps.map((step, idx) => {
             const IconComp = iconMap[step.icon] || MessageSquareText;
             const isSelected = activeStep === idx;
@@ -44,7 +44,7 @@ export default function ProcessTimeline() {
               <div
                 key={step.step}
                 onClick={() => setActiveStep(idx)}
-                className={`relative rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between cursor-pointer ${
+                className={`relative rounded-3xl p-5 sm:p-7 transition-all duration-300 flex flex-col justify-between cursor-pointer active:scale-[0.99] ${
                   isSelected
                     ? 'bg-gradient-to-b from-navy-900 to-navy-950 text-white shadow-elevated border-2 border-sky-400 ring-4 ring-sky-400/15 -translate-y-1'
                     : 'bg-white text-navy-900 border border-slate-200 shadow-soft hover:shadow-elevated hover:border-sky-300'
@@ -52,8 +52,8 @@ export default function ProcessTimeline() {
               >
                 {/* Step badge */}
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span className={`text-2xl font-black font-mono ${
+                  <div className="flex items-center justify-between mb-4 sm:mb-6">
+                    <span className={`text-xl sm:text-2xl font-black font-mono ${
                       isSelected ? 'text-sky-400' : 'text-brand-blue'
                     }`}>
                       {step.step}

@@ -40,24 +40,24 @@ export default function FaqAccordion({ limit = null }) {
                 <button
                   type="button"
                   onClick={() => toggleIndex(idx)}
-                  className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full text-left p-4 sm:p-7 flex items-center justify-between gap-3 sm:gap-4 focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-bold text-navy-900 flex items-center gap-3">
-                    <span className="text-brand-blue font-mono text-sm">
+                  <span className="text-sm sm:text-lg font-bold text-navy-900 flex items-center gap-2.5 sm:gap-3">
+                    <span className="text-brand-blue font-mono text-xs sm:text-sm shrink-0">
                       {idx < 9 ? `0${idx + 1}` : idx + 1}
                     </span>
-                    {faq.q}
+                    <span>{faq.q}</span>
                   </span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                     isOpen ? 'bg-brand-blue text-white rotate-180' : 'bg-slate-100 text-slate-500'
                   }`}>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 sm:px-7 sm:pb-7 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-4 animate-fade-in">
+                  <div className="px-4 pb-4 sm:px-7 sm:pb-7 text-xs sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3.5 sm:pt-4 animate-fade-in">
                     {faq.a}
                   </div>
                 )}

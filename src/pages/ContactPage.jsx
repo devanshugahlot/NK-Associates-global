@@ -36,29 +36,29 @@ export default function ContactPage() {
       />
 
       {/* Hero Header */}
-      <section className="bg-gradient-to-b from-sky-50/70 to-white py-16 sm:py-24 border-b border-slate-100 bg-fine-grid">
+      <section className="bg-gradient-to-b from-sky-50/70 to-white py-12 sm:py-24 border-b border-slate-100 bg-fine-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs mb-4">
-            <Clock className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs mb-3 sm:mb-4">
+            <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             <span>Guaranteed Response Within 12 Hours</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-snug sm:leading-tight">
             Let’s Discuss Your Firm’s{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-sky-500">
               Accounting Capacity
             </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-base sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Whether you want to explore a risk-free 2–4 week pilot, discuss recurring bookkeeping, or build a dedicated offshore pod, our practice specialists are here to assist.
           </p>
 
           {/* Quick Contact Buttons */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
             <a
               href="tel:+917568820015"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-navy-900 hover:text-brand-blue border border-slate-200 text-xs font-bold shadow-2xs transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-navy-900 hover:text-brand-blue border border-slate-200 text-xs font-bold shadow-2xs transition-colors active:scale-95"
             >
               <Phone className="w-3.5 h-3.5 text-brand-blue" />
               <span>Call: +91 75688 20015</span>
@@ -67,7 +67,7 @@ export default function ContactPage() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold shadow-2xs transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold shadow-2xs transition-colors active:scale-95"
             >
               <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
               <span>WhatsApp: +91 75688 20015</span>
@@ -77,15 +77,15 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content Grid: Contact Details & Form */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left Contact Information & Interactive Scheduler Card (5 cols on lg) */}
-            <div className="lg:col-span-5 space-y-8">
+            <div className="lg:col-span-5 space-y-6 sm:space-y-8">
               
               {/* Direct Booking Card */}
-              <div className="bg-gradient-to-br from-navy-950 to-navy-900 text-white rounded-3xl p-8 border border-navy-800 shadow-elevated">
+              <div className="bg-gradient-to-br from-navy-950 to-navy-900 text-white rounded-3xl p-6 sm:p-8 border border-navy-800 shadow-elevated">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-sky-500/20 text-sky-300 border border-sky-400/30 mb-4">
                   <Calendar className="w-3.5 h-3.5" />
                   <span>Instant Calendar Booking</span>

@@ -18,7 +18,7 @@ export default function TrustStrip() {
         </div>
 
         {/* Software Badges Grid */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-2 sm:gap-4">
           {siteContent.softwareStack.map((tool) => {
             const isSelected = selectedTool === tool.name;
             return (
@@ -26,20 +26,20 @@ export default function TrustStrip() {
                 key={tool.name}
                 type="button"
                 onClick={() => setSelectedTool(isSelected ? null : tool.name)}
-                className={`flex items-center gap-2.5 px-4 py-2.5 rounded-2xl border transition-all duration-200 group text-left cursor-pointer ${
+                className={`flex items-center gap-2 sm:gap-2.5 p-2.5 sm:px-4 sm:py-2.5 rounded-2xl border transition-all duration-200 group text-left cursor-pointer active:scale-95 ${
                   isSelected
                     ? 'bg-sky-500 text-navy-950 border-sky-400 shadow-sm scale-105'
                     : 'bg-slate-50 hover:bg-sky-50/80 border-slate-200/80 hover:border-sky-200 text-navy-900'
                 }`}
               >
-                <div className={`w-2 h-2 rounded-full transition-transform duration-200 ${
+                <div className={`w-2 h-2 rounded-full shrink-0 transition-transform duration-200 ${
                   isSelected ? 'bg-navy-950 scale-125' : 'bg-brand-blue group-hover:scale-125'
                 }`}></div>
-                <div>
-                  <span className="text-xs sm:text-sm font-bold block">
+                <div className="min-w-0">
+                  <span className="text-xs sm:text-sm font-bold block truncate">
                     {tool.name}
                   </span>
-                  <span className={`text-[10px] block ${isSelected ? 'text-navy-900 font-medium' : 'text-slate-600 font-normal'}`}>
+                  <span className={`text-[9px] sm:text-[10px] block truncate ${isSelected ? 'text-navy-900 font-medium' : 'text-slate-600 font-normal'}`}>
                     {tool.category}
                   </span>
                 </div>

@@ -32,7 +32,7 @@ export default function SecurityModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-navy-950/75 backdrop-blur-sm transition-opacity"
@@ -40,30 +40,30 @@ export default function SecurityModal() {
       ></div>
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden z-10 my-8 animate-slide-up">
+      <div className="relative w-full max-w-3xl bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl border-t sm:border border-slate-200 overflow-hidden z-10 max-h-[92vh] sm:max-h-[90vh] flex flex-col my-0 sm:my-8 animate-slide-up">
         
         {/* Header */}
-        <div className="px-6 py-5 bg-gradient-to-r from-navy-950 to-navy-900 text-white flex items-center justify-between border-b border-navy-800">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400">
-              <ShieldCheck className="w-6 h-6" />
+        <div className="px-4 sm:px-6 py-3.5 sm:py-5 bg-gradient-to-r from-navy-950 to-navy-900 text-white flex items-center justify-between border-b border-navy-800 shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 shrink-0">
+              <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div>
-              <h3 className="text-base font-bold">Standard Mutual NDA & Security Specifications</h3>
-              <p className="text-xs text-slate-300">Confidentiality & Data Protection Governance Document</p>
+            <div className="min-w-0">
+              <h3 className="text-sm sm:text-base font-bold truncate">Standard Mutual NDA & Security Specifications</h3>
+              <p className="text-[10px] sm:text-xs text-slate-300 truncate">Confidentiality & Data Protection Governance</p>
             </div>
           </div>
           <button
             onClick={closeSecurityModal}
-            className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center transition-colors"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center transition-colors shrink-0 cursor-pointer"
             aria-label="Close modal"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
 
         {/* Content Body */}
-        <div className="p-6 sm:p-8 max-h-[72vh] overflow-y-auto space-y-6 text-sm text-slate-700">
+        <div className="p-4 sm:p-8 overflow-y-auto flex-1 space-y-5 sm:space-y-6 text-xs sm:text-sm text-slate-700">
           
           <div className="bg-sky-50 border border-sky-200 rounded-2xl p-4 text-xs text-navy-900 flex items-start gap-3">
             <FileLock2 className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" />

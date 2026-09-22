@@ -27,20 +27,20 @@ export default function AboutPage() {
       />
 
       {/* Hero Header */}
-      <section className="bg-gradient-to-b from-sky-50/70 to-white py-16 sm:py-24 border-b border-slate-100 bg-fine-grid">
+      <section className="bg-gradient-to-b from-sky-50/70 to-white py-12 sm:py-24 border-b border-slate-100 bg-fine-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs mb-4">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-white text-brand-blue border border-sky-200 shadow-2xs mb-3 sm:mb-4">
             <span>Our Origin & Purpose</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-snug sm:leading-tight">
             Empowering Accounting Practices with{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-sky-500">
               World-Class Offshore Talent
             </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-4 sm:mt-6 text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Headquartered in India, NK Associates serves as the dedicated back-office engine for Chartered Accountants, CPA firms, accounting practices, and expanding businesses worldwide.
           </p>
         </div>

@@ -23,14 +23,14 @@ export default function EngagementModels() {
         />
 
         {/* 3 Models Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {siteContent.engagementModels.map((model) => {
             const isPopular = model.isPopular;
 
             return (
               <div
                 key={model.id}
-                className={`relative rounded-[2rem] p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-3xl sm:rounded-[2rem] p-6 sm:p-9 flex flex-col justify-between transition-all duration-300 ${
                   isPopular
                     ? 'bg-gradient-to-b from-navy-900 to-navy-950 text-white shadow-elevated border-2 border-sky-400 ring-4 ring-sky-400/10 lg:-translate-y-2'
                     : 'bg-white text-navy-900 border border-slate-200 shadow-soft hover:shadow-elevated'
@@ -38,7 +38,7 @@ export default function EngagementModels() {
               >
                 {/* Popular Pill */}
                 {isPopular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-sky-500 text-navy-950 text-[11px] font-extrabold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-sky-500 text-navy-950 text-[10px] sm:text-[11px] font-extrabold px-3.5 sm:px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
                     {model.badge}
                   </div>
                 )}
